@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap'); 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @font-face {
+  font-family: 'Rubik';
+  src: local('Rubik'), url('../font/Rubik-VariableFont_wght.ttf') format('truetype');
+} */
+
+* {
+  font-family: 'Rubik',  sans-serif;
+}
+
+.video-wrapper {
+  height: 100%;
+  width: 100%;
+  min-height: 225px;
+}
+.player-wrapper {
+  width: auto;
+  height: auto;
+}
+.react-player {
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.react-player > div {
+  position: absolute;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@layer components {
+
+  .reference-border {
+    @apply
+    border-4 
+    border-gray-900
+    border-dashed
+  }
+
+  /* Inputs */
+
+  .header-dropdown {
+    @apply 
+    inline-flex 
+    justify-center 
+    w-full 
+    px-2 
+    py-2 
+    text-sm
+    font-semibold 
+    text-fonttext 
+    bg-menu 
+    rounded-md 
+    hover:bg-selected 
+    focus:outline-none 
+    focus-visible:ring-2 
+    focus-visible:ring-white 
+    focus-visible:ring-opacity-75
+  }
+
+  .header-dropdown-items {
+    @apply
+    right-0 
+    w-32
+    mt-1
+    text-fonttext
+    bg-white 
+    divide-y 
+    divide-gray-100 
+    rounded
+    shadow-lg 
+    focus:outline-none
+  }
+
+  .single-input {
+    @apply
+    placeholder:text-gray-300
+    bg-menu
+    w-full
+    min-h-[3rem]
+    border
+    border-[#CCCCCC]
+    rounded-md
+    hover:border-primary
+    focus:outline-none
+    focus:border-primary
+    focus:ring-1
+    text-sm
+    text-fonttext
+  }
+
+  /* Buttons */
+
+  .sidebar-button {
+    @apply flex 
+    flex-row 
+    items-center 
+    border border-white hover:border-primary 
+    h-10
+    mx-3
+    rounded-md
+    text-sm 
+    text-secondary
+  }
+
+  .sidebar-button-selected {
+    @apply flex 
+    flex-row 
+    items-center 
+    border-2 border-white  
+    h-10
+    mx-3
+    rounded-lg
+    bg-selected
+    shadow-inner
+    font-medium
+    text-sm 
+    text-secondary
+  }
+
+  .button {
+    @apply
+    bg-primary
+    text-xs
+    text-menu
+    font-medium
+    rounded
+    w-36
+    h-8
+    shadow-innerB
+    hover:bg-primaryhover
+  }
+
+  .button-disabled {
+    @apply
+    bg-gray-300
+    text-xs
+    text-menu
+    font-medium
+    rounded
+    w-36
+    h-8
+    shadow-innerB
+  }
+
+  .adjustable-button {
+    @apply
+    grow
+    bg-primary
+    text-xs
+    text-menu
+    font-medium
+    rounded-lg
+    shadow-innerB
+    hover:bg-primaryhover
+  }
+
+  .delete-button {
+    @apply
+    grow
+    bg-delete
+    text-xs
+    text-menu
+    font-medium
+    rounded-lg
+    shadow-innerB
+    hover:bg-deletehover
+  }
+
+  .adjustable-button-2 {
+    @apply
+    grow
+    bg-inherit
+    border
+    border-primary
+    text-xs
+    text-primary
+    font-medium
+    rounded-lg
+    hover:bg-secondaryhover
+  }
+
+  .modal-buttons {
+    @apply
+    w-32
+    text-center
+    font-light
+    py-1 
+    rounded-md
+    border
+  }
+
+  /* Text */
+
+  .main-titles {
+    @apply
+    text-2xl
+    font-semibold
+    text-fonttext
+  }
+
+  .main-titles-description {
+    @apply
+    text-sm
+    font-semibold
+    text-fonttext
+  }
+
+  .tool-titles {
+    @apply
+    text-lg
+    font-bold
+    text-fonttext
+  }
+
+  .tool-subtitles {
+    @apply
+    text-base
+    font-medium
+    text-fonttext
+  }
+
+  .tool-description {
+    @apply
+    text-xs
+    text-fonttext
+  }
+
+  .session-titles {
+    @apply
+    text-3xl
+    font-semibold
+    text-sessions
+  }
+
+  .session-titles-description {
+    @apply
+    mt-3
+    text-xs
+    font-semibold
+    text-sessions
+  }
+}
